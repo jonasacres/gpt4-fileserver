@@ -10,9 +10,12 @@ document.getElementById('upload').addEventListener('click', function() {
     var progressBarDiv = progressBar.querySelector('div');
     var uploadCompleteLabel = document.getElementById('upload-complete');
     var uploadStatus = document.getElementById('upload-status');
-    var tokenField = document.getElementById('token'); // get the token field
-    var tokenValue = tokenField.value; // get the value of the token field
+    var tokenField = document.getElementById('token');
+    var tokenValue = tokenField.value;
     var startTime;
+
+    // Remove error class from token field
+    tokenField.classList.remove('error');
 
     progressBarDiv.style.width = '0%';
     progressBarDiv.textContent = '';
@@ -26,7 +29,7 @@ document.getElementById('upload').addEventListener('click', function() {
     var formData = new FormData();
     formData.append('filename', file.name);
     formData.append('filesize', file.size);
-    formData.append('token', tokenValue); // use the token value obtained from the token field
+    formData.append('token', tokenValue);
 
     authRequest.addEventListener('load', function() {
         if (authRequest.status === 200) {
@@ -59,7 +62,10 @@ document.getElementById('upload').addEventListener('click', function() {
                     uploadCompleteLabel.style.display = 'block';
                     uploadStatus.textContent = '';
                 } else if (uploadRequest.status == 403) {
-                    uploadStatus.textContent = 'Invalid auth';
+                    // Add error class to token field and focus on it
+                    tokenField.classList.add('error');
+                    tokenField.focus();
+                    uploadStatus.textContent = 'Authentication error';
                 }
             });
 
@@ -68,7 +74,10 @@ document.getElementById('upload').addEventListener('click', function() {
             formData.append('file', file);
             uploadRequest.send(formData);
         } else if (authRequest.status == 403) {
-            uploadStatus.textContent = 'Invalid token';
+            // Add error class to token field and focus on it
+            tokenField.classList.add('error');
+            tokenField.focus();
+            uploadStatus.textContent = 'Wrong password';
         }
     });
 

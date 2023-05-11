@@ -1,78 +1,113 @@
+/* Reset default styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* Set the background color */
 body {
-    background-color: #0f0f0f;
-    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
-    color: #00ff00;
-    text-align: center;
+    background-color: #0c0c1e;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
 }
 
+/* Set the header */
+header {
+    background-color: #1d1d42;
+    color: #fff;
+    padding: 10px;
+    font-size: 24px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Set the container */
 .container {
-    margin: auto;
-    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-h1, h2 {
-    color: #ff0000;
-}
-
-#file {
+/* Set the form */
+form {
     margin: 20px 0;
-    background-color: #00ff00;
-    border: 2px solid #ff0000;
-    padding: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
-#token {
-    margin: 20px 0;
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
     color: #000;
-    font-weight: bold;
-    background-color: #ff0000;
-    border: 2px solid #00ff00;
-    padding: 5px;
+    background-color: #f4f4f4;
 }
 
-#upload {
-    background-color: #0000ff;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: 2px solid #ff0000;
+input[type="button"] {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #33cc33;
     cursor: pointer;
 }
 
+/* Set the progress bar */
 .progress-bar {
-    font-size: 22px;
-    color: #ff0000;
-    background-color: #ff0000;
-    border: 2px solid #ff0000;
-    width: 100%;
+    margin-top: 20px;
     height: 30px;
+    background-color: #ccc;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
 }
 
 .progress-bar div {
     height: 100%;
-    background-color: #00ff00;
+    background-color: #33cc33;
     width: 0%;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.blurb {
-  font-color: #333;
-  font-size: 12px;
-}
-
-.blurb span {
-  font-style: italic;
-}
-
+/* Set the upload status */
 #upload-status {
     margin-top: 20px;
     font-size: 18px;
 }
 
+/* Set the upload complete section */
 #upload-complete {
-    color: #00ff00;
+    margin-top: 20px;
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
 }
 
 #upload-complete img {
-  clear: both;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Set the error styling */
+input[type="text"].error {
+    border: 2px solid #ffcc00;
+    background-color: #fff;
+    color: #000;
 }
