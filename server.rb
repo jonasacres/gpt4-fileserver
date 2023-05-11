@@ -60,7 +60,7 @@ class App
 
     log_upload(req, filename, tempfile.size, ip_address, "Begin file upload")
 
-    Dir.mkdir('upload') unless Dir.exists?('upload')
+    Dir.mkdir('upload') unless Dir.exist?('upload')
     path = File.join('upload', filename)
 
     File.open(path, 'wb') do |file|
