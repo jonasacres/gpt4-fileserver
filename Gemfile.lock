@@ -1,0 +1,27 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    cgi (0.3.6)
+    chroma (0.2.0)
+    glug (0.0.8)
+      chroma
+      hsluv
+      neatjson
+    hsluv (1.0.1)
+    neatjson (0.10.5)
+    rack (3.0.7)
+    sqlite3 (1.6.2-x86_64-linux)
+    webrick (1.8.1)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  cgi
+  glug
+  rack
+  sqlite3
+  webrick
+
+BUNDLED WITH
+   2.4.13

@@ -1,0 +1,78 @@
+body {
+    background-color: #0f0f0f;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
+    color: #00ff00;
+    text-align: center;
+}
+
+.container {
+    margin: auto;
+    width: 80%;
+}
+
+h1, h2 {
+    color: #ff0000;
+}
+
+#file {
+    margin: 20px 0;
+    background-color: #00ff00;
+    border: 2px solid #ff0000;
+    padding: 5px;
+}
+
+#token {
+    margin: 20px 0;
+    color: #000;
+    font-weight: bold;
+    background-color: #ff0000;
+    border: 2px solid #00ff00;
+    padding: 5px;
+}
+
+#upload {
+    background-color: #0000ff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 2px solid #ff0000;
+    cursor: pointer;
+}
+
+.progress-bar {
+    font-size: 22px;
+    color: #ff0000;
+    background-color: #ff0000;
+    border: 2px solid #ff0000;
+    width: 100%;
+    height: 30px;
+}
+
+.progress-bar div {
+    height: 100%;
+    background-color: #00ff00;
+    width: 0%;
+}
+
+.blurb {
+  font-color: #333;
+  font-size: 12px;
+}
+
+.blurb span {
+  font-style: italic;
+}
+
+#upload-status {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#upload-complete {
+    color: #00ff00;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#upload-complete img {
+  clear: both;
+}

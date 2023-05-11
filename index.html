@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>File Upload</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <marquee><h1>Welcome to Unity Mathematics File Upload!</h1></marquee>
+        <div class="container">
+            <h2>Choose Your File!</h2>
+            <form id="upload-form">
+                <input type="file" id="file" name="file">
+                <input type="text" id="token" placeholder="password">
+                <input type="button" id="upload" value="Upload Now!">
+            </form>
+            <h2>Your Upload Progress:</h2>
+            <div class="progress-bar" id="progress-bar">
+                <div></div>
+            </div>
+            <div id="upload-status"></div>
+            <div id="upload-complete" style="display: none;">
+                <p>Congratulations! Your Upload is Complete!</p>
+                <img src="dancing-baby.gif" alt="yes THAT gif" />
+                <div class="blurb"><span>why yes, I DID ask ChatGPT to write a file upload tool that looks like a Geocities page... why do you ask?</span> 🤔</div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
