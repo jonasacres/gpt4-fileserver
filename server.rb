@@ -93,4 +93,4 @@ class App
   end
 end
 
-Rack::Handler::WEBrick.run App.new, :Port => 8080
+Rack::Handler::WEBrick.run App.new, Host: '0.0.0.0', :Port => 8080
